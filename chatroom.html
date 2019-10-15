@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chatroom</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="chatroom.css">
+</head>
+<body>
+
+    <nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Chatroom App</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+       
+
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#" id="userFullname"></a></li>
+            <li><a href="#" onclick="ChatRoom.LogOut()"><i class="material-icons">power_settings_new</i></a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <div class="chat-app card">
+        <div class="chat-header">
+            <h5 class="m-0 sidebar-title"><i class="material-icons app-header-icon text-top">mail_outline</i> Chat</h5>
+            <span class="option-icon">
+                <span class="favorite">
+                    <i class="material-icons">star_outline</i>
+                </span>
+                <i class="material-icons">more_vert</i>
+            </span>
+        </div>
+        <div class="chat-body" id="chatContainer">
+            <!-- <div class="chat chat-left">
+                <img src="profile.jpg" />
+                <div class="chat-con">
+                    <p class="chat-name">Chatmate</p>
+                    <div class="chat-message">Hello!</div>
+                </div>
+            </div>
+            <div class="chat chat-right">
+                <img src="profile.jpg" />
+                <div class="chat-con">
+                    <p class="chat-name">You</p>
+                    <div class="chat-message">Hello!</div>
+                </div>
+            </div> -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" placeholder="Type message here.." class="message" id="inputMessage">
+            <a class="btn waves-effect waves-light send" onclick="ChatRoom.addMessage();">Send</a>
+        </div>
+    </div>
+    
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="fireBase.js"></script>
+  <script src="chatroom.js"></script>
+</body>
+</html>
